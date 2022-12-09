@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>End of the Game</title>
+    <link rel="icon" href="ideas.png"/><title>End of the Game</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 <body>
+    <!--Loader-->
+    <div class="contain">
+        <div class="wrapper">
+            <div class="loader">
+                <div class="wn"></div>
+            </div>
+            <div class="loader">
+                <div class="wn"></div>
+            </div>
+            <div class="loader">
+                <div class="wn"></div>
+            </div>
+            <div class="loader">
+                <div class="wn"></div>
+            </div>
+            <div class="loader">
+                <div class="wn"></div>
+            </div>
+            <div class="loader">
+                <div class="wn"></div>
+            </div>
+        </div>
+        <div class="title">Loading...</div>
+    </div>
+
     <div class="container">
         <div id="end" class="flex-center flex-column">
             <h1 id="finalScore">0</h1>
@@ -17,7 +42,6 @@
                 <input type="text" name="name" placeholder="Enter your name" id="username">
                 <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
             </form>
-            <a href="game.html" class="btn">Play Again<i class="fas fa-menu"></i></a>
             <a href="main.html" class="btn">Go Home<i class="fas fa-home"></i></a>
             <a href="highscores.html" class="btn" id="highscore-btn">Leaderboard<i class="fas fa-crown"></i></a>
         </div>

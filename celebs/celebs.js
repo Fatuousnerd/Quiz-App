@@ -19,23 +19,23 @@ availableQuestions = [];
 
 let questions = [
     {
-        question: 'What is 2 + 2',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
-        answer: 2,
-    },
-    {
-        question: 'How many members are in Beta Squad',
-        choice1: '2',
-        choice2: '4',
-        choice3: '5',
+        question: 'Which artist made history in 2020 as the youngest winner of the Grammys` four main categories?',
+        choice1: 'Kendrick Lamar',
+        choice2: 'Lil Durk',
+        choice3: 'Billie Eilish',
         choice4: '17',
         answer: 3,
     },
     {
-        question: 'Who is the richest man in the world',
+        question: 'Prior to appearing in Black Panther, Michael B. Jordan starred in which Marvel movie?',
+        choice1: '2',
+        choice2: '4',
+        choice3: '5',
+        choice4: 'Fantastic Four',
+        answer: 4,
+    },
+    {
+        question: 'Which tech entrepreneur named his son X Æ A-12?',
         choice1: 'Elon Musk',
         choice2: 'Bills Gates',
         choice3: 'Jack Ma',
@@ -43,17 +43,65 @@ let questions = [
         answer: 1,
     },
     {
-        question: 'What is 7 + 2',
+        question: 'Who was the highest-paid actress of 2019, according to Forbes?',
         choice1: '11',
         choice2: '4',
         choice3: '21',
-        choice4: '17',
-        answer: 1,
+        choice4: 'Scarlett Johansson',
+        answer: 4,
+    },
+    {
+        question: 'Who did Forbes name the youngest “self-made billionaire ever” in 2019?',
+        choice1: '11',
+        choice2: 'Kylie Jenner',
+        choice3: '21',
+        choice4: 'Scarlett Johansson',
+        answer: 2,
+    },
+    {
+        question: 'Which actor voiced both Darth Vader and The Lion King`s Mufasa?',
+        choice1: '11',
+        choice2: 'Kylie Jenner',
+        choice3: 'James Earl Jones',
+        choice4: 'Scarlett Johansson',
+        answer: 3,
+    },
+    {
+        question: 'Which actor voiced both Darth Vader and The Lion King`s Mufasa?',
+        choice1: '11',
+        choice2: 'Kylie Jenner',
+        choice3: 'James Earl Jones',
+        choice4: 'Scarlett Johansson',
+        answer: 3,
+    },
+    {
+        question: 'Which actor voiced both Darth Vader and The Lion King`s Mufasa?',
+        choice1: '11',
+        choice2: 'Kylie Jenner',
+        choice3: 'James Earl Jones',
+        choice4: 'Scarlett Johansson',
+        answer: 3,
+    },
+    {
+        question: 'Which actor voiced both Darth Vader and The Lion King`s Mufasa?',
+        choice1: '11',
+        choice2: 'Kylie Jenner',
+        choice3: 'James Earl Jones',
+        choice4: 'Scarlett Johansson',
+        answer: 3,
+    },
+    {
+        question: 'Which actor voiced both Darth Vader and The Lion King`s Mufasa?',
+        choice1: '11',
+        choice2: 'Kylie Jenner',
+        choice3: 'James Earl Jones',
+        choice4: 'Scarlett Johansson',
+        answer: 3,
     }
 ]
 
 const SCORE_POINTS = 100,
-MAX_QUESTIONS = 4;
+MAX_QUESTIONS = questions.length;
 
 startGame = () => {
     questionCounter = 0
@@ -65,7 +113,7 @@ startGame = () => {
 getNewQuestion = () => {
     if(availableQuestions.length == 0 || questionCounter > MAX_QUESTIONS){
         localStorage.setItem('mostRecentScore', score)
-        return window.location.assign('end.html')
+        return window.location.assign('../end.html')
     }
     questionCounter++
     progressText.innerHTML = `Question ${questionCounter} of ${MAX_QUESTIONS}`

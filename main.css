@@ -9,10 +9,80 @@ body{
     background: url(https://picsum.photos/1368/1368);
     font-size: 62.5%;
     font-family: 'Nova Square', cursive;
-    display: grid;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.contain{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    z-index: 9999;
+    justify-content: center;
+    width: 100%;
+}
+.title{
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: sans-serif;
+    bottom: -85px;
+}
+.loader{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: -35px;
+    animation: rotate 3.2s linear infinite;
+}
+@keyframes rotate {
+    30%{
+        transform: rotate(220deg);
+    }
+    40%{
+        transform: rotate(450deg);
+    }
+    75%{
+        transform: rotate(720deg);
+        opacity: 1;
+    }
+    76%{
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.loader:nth-child(1){
+    animation-delay: 0.15s;
+}
+.loader:nth-child(2){
+    animation-delay: 0.30s;
+}
+.loader:nth-child(3){
+    animation-delay: 0.45s;
+}
+.loader:nth-child(4){
+    animation-delay: 0.60s;
+}
+.loader:nth-child(5){
+    animation-delay: 0.75s;
+}
+.loader:nth-child(6){
+    animation-delay: 0.90s;
+}
+.wrapper{
+    position: absolute;
+    top: -80px;
+}
+.wn{
+    height: 8px;
+    width: 8px;
+    background-color: #fff;
+    border-radius: 50px;
+    position: relative;
+    top: 25px;
 }
 nav{
     width: 100vw;
@@ -20,19 +90,30 @@ nav{
     background: rgb(255, 255, 255, 0.5);
     backdrop-filter: blur(50px);
     margin-bottom: 20px;
+    display: flex;
+}
+nav a{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 10px;
 }
 .card{
     width: 200px;
-    max-height: 300px;
+    min-height: 300px;
     margin: 10px;
-    background: rgb(255, 255, 255, 0.5);
+    background: rgb(252, 252, 255, 0.5);
+    backdrop-filter: blur(20px);
     border-radius: 5px;
     padding: 2rem;
-    color: #fff;
-    font-display: flex;
+    color: #141414;
+    font-size: 4.5rem auto;
+    padding: 2rem;
+    word-wrap: break-word;
 }
 .card:hover{
     transform: scale(1.05);
+    box-shadow: 0 0.4rem 1.4rem 0 #141414;
 }
 #carry{
     display: inline-flex;
@@ -40,4 +121,45 @@ nav{
     justify-items: center;
     text-align: center;
     align-items: center;
+}
+.btn{
+    font-size: 1.4rem;
+    left: 5%;
+    top: 10%;
+    position: absolute;
+    padding: .2rem;
+    width: 3rem;
+    margin-bottom: .5rem;
+    color: rgb(28, 26, 26);
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 7px;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(0,0, 2, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+.btn[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+.ads{
+    width: 720px;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+    justify-self: center;
+    position: relative;
+    left: 25%;
+    background: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 7px;
+}
+p{
+    font-size: 1.2rem;
+    margin-top: 10px;
 }

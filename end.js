@@ -3,6 +3,13 @@ saveScoreBtn = document.querySelector('#saveScoreBtn'),
 finalScore = document.querySelector('#finalScore'),
 mostRecentScore = localStorage.getItem('mostRecentScore');
 
+var contain = document.querySelector(".contain"),
+loader = document.querySelector(".loader");
+
+window.addEventListener("load", () => {
+    contain.style.display = 'none'
+});
+
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []
 const MAX_HIGH_SCORES = 5
 
